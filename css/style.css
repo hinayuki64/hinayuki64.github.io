@@ -347,34 +347,41 @@ a:hover {
   margin: 0 0 1rem;
 }
 
-.skill-list {
+.language-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  gap: 0.6rem;
 }
 
-.skill-list li {
+.language-item {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   gap: 1rem;
-  padding: 0.55rem 0;
-  border-bottom: 1px solid var(--color-border);
+  padding: 0.65rem 0.85rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
   font-size: 0.95rem;
 }
 
-.skill-list li:last-child {
-  border-bottom: none;
-}
-
-.skill-name {
+.language-name {
   font-weight: 500;
 }
 
-.skill-level {
-  font-size: 0.85rem;
+.language-level {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.78rem;
+  line-height: 1;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
   color: var(--color-text-muted);
-  text-align: right;
+  white-space: nowrap;
 }
 
 /* Cards */
