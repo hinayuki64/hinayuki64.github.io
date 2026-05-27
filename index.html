@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="研究者のホームページ — 研究内容、論文、経歴">
+  <title>Yu TANAHASHI | Project Researcher</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">Yu TANAHASHI</a>
+      <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="メインナビゲーション">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <!-- <li><a href="#research">Research</a></li>
+          <li><a href="#publications">Publications</a></li> -->
+          <li><a href="#education">Education</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hero-label">Project Researcher</p>
+          <h1>Yu TANAHASHI</h1>
+          <p class="hero-affiliation">
+           東京大学大学院経済学研究科 松井研究室 特任研究員 <br>東京大学マーケットデザインセンター(UTMD) リサーチアシスタント<br
+          </p>
+          <p class="hero-bio">
+            東京大学で経済学と情報科学を学び、経済学と情報科学の融合領域で研究を行っています。
+          </p>
+          <div class="hero-links">
+            <a href="mailto:yutanahashi795@g.ecc.u-tokyo.ac.jp" class="btn btn-primary">Email</a>
+            <a href="#" class="btn btn-outline">CV (PDF)</a>
+            <!-- <a href="https://scholar.google.com/" class="btn btn-outline" target="_blank" rel="noopener">Google Scholar</a> -->
+          </div>
+        </div>
+        <figure class="hero-photo">
+          <!-- プロフィール写真: assets/profile.jpg を差し替えてください -->
+          <img src="assets/profile.jpg" alt="Yu TANAHASHI のプロフィール写真" width="280" height="280">
+        </figure>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About</h2>
+        <div class="about-grid">
+          <div class="about-main">
+            <p>
+              東京大学経済学部を卒業後、同大学院学際情報学府で修士号を取得。学部時代は松井ゼミ・尾山ゼミでミクロ経済学・ゲーム理論を専攻。大学院では越塚研究室でスマートシティに関する研究を行う。
+            </p>
+            <p>
+              修士終了後は就職し、ヤフー(LINEヤフー)株式会社にてインフラエンジニアとして、株式会社アトラエでソフトウェアエンジニアとして働く。
+            </p>
+            <p>
+              2026年より東京大学に戻り、特任研究員・RAとして研究を行う傍ら、博士課程進学を目指している。
+            </p>
+          </div>
+          <aside class="about-sidebar">
+            <h3>Research Interests</h3>
+            <ul class="tag-list">
+              <li>インフォメーションデザイン</li>
+              <li>ゲーム理論</li>
+              <li>マーケットデザイン</li>
+              <li>障害と経済</li>
+              <li>交通経済学</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3 class="skill-group-title">言語</h3>
+            <ul class="skill-list">
+              <li>
+                <span class="skill-name">日本語</span>
+                <span class="skill-level">ネイティブ</span>
+              </li>
+              <li>
+                <span class="skill-name">英語</span>
+                <span class="skill-level">論文読解・日常会話</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group-title">プログラミング</h3>
+            <ul class="tag-list">
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>Go</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group-title">技術・ツール</h3>
+            <ul class="tag-list">
+              <li>Git</li>
+              <li>Linux</li>
+              <li>Docker</li>
+              <li>LaTeX</li>
+              <li>AWS</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <!-- <section id="research" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Research</h2>
+        <p class="section-lead">
+          現在進行中の研究プロジェクトや、代表的な研究テーマを紹介します。
+        </p>
+        <div class="card-grid">
+          <article class="card">
+            <h3>プロジェクトタイトル 1</h3>
+            <p>
+              研究の概要を説明します。目的、手法、期待される成果などを
+              簡潔に記述してください。
+            </p>
+            <a href="#" class="card-link">詳細を見る →</a>
+          </article>
+          <article class="card">
+            <h3>プロジェクトタイトル 2</h3>
+            <p>
+              共同研究者名や関連する学会・ジャーナルへのリンクを
+              ここに追加できます。
+            </p>
+            <a href="#" class="card-link">論文を見る →</a>
+          </article>
+          <article class="card">
+            <h3>プロジェクトタイトル 3</h3>
+            <p>
+              デモページや GitHub リポジトリへのリンクも
+              カード内に配置できます。
+            </p>
+            <a href="https://github.com/hinayuki64" class="card-link" target="_blank" rel="noopener">GitHub →</a>
+          </article>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Publications
+    <section id="publications" class="section">
+      <div class="container">
+        <h2 class="section-title">Publications</h2>
+        <p class="section-lead">
+          論文リストは下記の <code>&lt;article&gt;</code> ブロックをコピーして追加してください。
+        </p>
+
+        <div class="pub-filters" role="group" aria-label="論文のフィルター">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="journal">Journal</button>
+          <button class="filter-btn" data-filter="conference">Conference</button>
+          <button class="filter-btn" data-filter="preprint">Preprint</button>
+        </div>
+
+        <div class="pub-list">
+          <article class="pub-item" data-type="journal">
+            <span class="pub-badge">Journal</span>
+            <h3 class="pub-title">論文タイトルをここに記載</h3>
+            <p class="pub-authors">
+              <strong>Yu TANAHASHI</strong>, Co-author A, Co-author B
+            </p>
+            <p class="pub-venue">
+              <em>Journal Name</em>, Vol. XX, pp. XX–XX, 2025.
+            </p>
+            <div class="pub-links">
+              <a href="#">PDF</a>
+              <a href="#">DOI</a>
+              <a href="#">Code</a>
+              <a href="#">BibTeX</a>
+            </div>
+          </article>
+
+          <article class="pub-item" data-type="conference">
+            <span class="pub-badge">Conference</span>
+            <h3 class="pub-title">国際会議での発表論文タイトル</h3>
+            <p class="pub-authors">
+              Co-author A, <strong>Yu TANAHASHI</strong>, Co-author B
+            </p>
+            <p class="pub-venue">
+              <em>Proceedings of Conference Name (CONF)</em>, 2024.
+            </p>
+            <div class="pub-links">
+              <a href="#">PDF</a>
+              <a href="#">Slides</a>
+              <a href="#">Poster</a>
+            </div>
+          </article>
+
+          <article class="pub-item" data-type="preprint">
+            <span class="pub-badge">Preprint</span>
+            <h3 class="pub-title">プレプリントのタイトル</h3>
+            <p class="pub-authors">
+              <strong>Yu TANAHASHI</strong>, Co-author A
+            </p>
+            <p class="pub-venue">
+              <em>arXiv preprint arXiv:0000.00000</em>, 2024.
+            </p>
+            <div class="pub-links">
+              <a href="#">arXiv</a>
+              <a href="#">Code</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Education & Experience -->
+    <section id="education" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Education &amp; Experience</h2>
+
+        <h3 class="timeline-group-title">職歴</h3>
+        <ol class="timeline">
+          <!-- 1件分のひな型（コピーして使う）
+          <li class="timeline-item">
+            <time class="timeline-period" datetime="2023-04">
+              <span class="timeline-period-from">2023.04</span>
+              <span class="timeline-period-to">現在</span>
+            </time>
+            <div class="timeline-body">
+              <p class="timeline-role">職種・役職</p>
+              <p class="timeline-place">所属（会社名・部署・研究室など）</p>
+              <ul class="timeline-details">
+                <li>担当業務やプロジェクト（任意・複数可）</li>
+              </ul>
+            </div>
+          </li>
+          -->
+        </ol>
+
+        <h3 class="timeline-group-title">学歴</h3>
+        <ol class="timeline">
+          <li class="timeline-item">
+            <time class="timeline-period" datetime="2020-04/2022-03">
+              <span class="timeline-period-from">2020.04</span>
+              <span class="timeline-period-to">2022.03</span>
+            </time>
+            <div class="timeline-body">
+              <p class="timeline-role">東京大学大学院 学際情報学府</p>
+              <ul class="timeline-details">
+                <li><span class="timeline-label">取得学位</span>修士（学際情報学）</li>
+                <li><span class="timeline-label">修士論文</span>「空間人流データを用いた混雑を回避したMaaS における最適経路発見」</li>
+                <li><span class="timeline-label">指導教員</span>越塚登</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <time class="timeline-period" datetime="2016-04/2020-03">
+              <span class="timeline-period-from">2016.04</span>
+              <span class="timeline-period-to">2020.03</span>
+            </time>
+            <div class="timeline-body">
+              <p class="timeline-role">東京大学 経済学部</p>
+              <ul class="timeline-details">
+                <li><span class="timeline-label">取得学位</span>学士（経済学）</li>
+                <li><span class="timeline-label">卒業論文</span>「クラブコンバットのゲーム理論的分析」</li>
+                <li><span class="timeline-label">指導教員</span>松井彰彦</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- News -->
+    <section id="news" class="section">
+      <div class="container">
+        <h2 class="section-title">News</h2>
+        <ul class="news-list">
+          <li>
+            <time datetime="2026-05">2026.05</time>
+            <span>REDDYメンバーとして<a href=https://www.reddy.e.u-tokyo.ac.jp/member/tanahashi.html>自己紹介</a>が更新されました。</span>
+          </li>
+          <!-- <li>
+            <time datetime="2025-03">2025.03</time>
+            <span>CONF 2025 で発表しました。</span>
+          </li>
+          <li>
+            <time datetime="2024-10">2024.10</time>
+            <span>研究助成（JSPS 科研費 若手研究）が採択されました。</span> -->
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p><strong>Email:</strong> <a href="mailto:yutanahashi795@g.ecc.u-tokyo.ac.jp">yutanahashi795@g.ecc.u-tokyo.ac.jp</a></p>
+            <p><strong>Office:</strong> 東京大学 国際学術研究科棟 8F 814号室</p>
+            <p><strong>Address:</strong> 〒113-0033 東京都文京区本郷7-3-1</p>
+          </div>
+          <div class="contact-links">
+            <!-- <a href="https://scholar.google.com/" target="_blank" rel="noopener" aria-label="Google Scholar">
+              <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2zm0 2a5 5 0 0 1 3.5 8.5H8.5A5 5 0 0 1 12 4zm-6 14v2h12v-2H6z"/></svg>
+              Google Scholar
+            </a>
+            <a href="https://orcid.org/" target="_blank" rel="noopener" aria-label="ORCID">
+              <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15H9V9h2v8zm4 0h-2V9h2v8z"/></svg>
+              ORCID
+            </a> -->
+            <a href="https://github.com/hinayuki64" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02A9.58 9.58 0 0 1 12 6.8c.85.004 1.71.115 2.51.337 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5A10 10 0 0 0 22 12 10 10 0 0 0 12 2z"/></svg>
+              GitHub
+            </a>
+            <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X">
+              <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              X
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-1.05.89-1.93 2.05-1.93 1.4 0 2.08.95 2.08 2.31v4.55h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94V8.88H5.5v9.62h2.77z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Yu TANAHASHI. All rights reserved.</p>
+      <p class="footer-note">Last updated: 2026-05-27</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
