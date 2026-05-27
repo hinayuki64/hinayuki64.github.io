@@ -16,22 +16,29 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="#">Yu TANAHASHI</a>
+      <div class="header-actions">
+        <nav class="site-nav" aria-label="メインナビゲーション">
+          <ul>
+            <li><a href="#about">自己紹介</a></li>
+            <li><a href="#skills">スキル</a></li>
+            <!-- <li><a href="#research">Research</a></li>
+            <li><a href="#publications">Publications</a></li> -->
+            <li><a href="#education">学歴・職歴</a></li>
+            <li><a href="#news">お知らせ</a></li>
+            <li><a href="#contact">連絡先</a></li>
+          </ul>
+        </nav>
+        <ul class="lang-switch" aria-label="言語">
+          <li><a href="index.html" hreflang="ja" lang="ja" aria-current="page">JA</a></li>
+          <li><span class="lang-switch-sep" aria-hidden="true">/</span></li>
+          <li><a href="en/index.html" hreflang="en" lang="en">EN</a></li>
+        </ul>
+      </div>
       <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <nav class="site-nav" aria-label="メインナビゲーション">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <!-- <li><a href="#research">Research</a></li>
-          <li><a href="#publications">Publications</a></li> -->
-          <li><a href="#education">Education</a></li>
-          <li><a href="#news">News</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
     </div>
   </header>
 
@@ -40,17 +47,18 @@
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-text">
-          <p class="hero-label">Project Researcher</p>
-          <h1>Yu TANAHASHI</h1>
+          <p class="hero-label">特任研究員</p>
+          <h1>棚橋 悠</h1>
           <p class="hero-affiliation">
-           東京大学大学院経済学研究科 松井研究室 特任研究員 <br>東京大学マーケットデザインセンター(UTMD) リサーチアシスタント<br
+            東京大学大学院経済学研究科 松井研究室 特任研究員<br>
+            東京大学マーケットデザインセンター(UTMD) リサーチアシスタント
           </p>
           <p class="hero-bio">
             東京大学で経済学と情報科学を学び、経済学と情報科学の融合領域で研究を行っています。
           </p>
           <div class="hero-links">
             <a href="mailto:yutanahashi795@g.ecc.u-tokyo.ac.jp" class="btn btn-primary">Email</a>
-            <a href="#" class="btn btn-outline">CV (PDF)</a>
+            <a href="assets/cv.pdf" class="btn btn-outline">CV (PDF)</a>
             <!-- <a href="https://scholar.google.com/" class="btn btn-outline" target="_blank" rel="noopener">Google Scholar</a> -->
           </div>
         </div>
@@ -114,9 +122,11 @@
             <h3 class="skill-group-title">プログラミング</h3>
             <ul class="tag-list">
               <li>Python</li>
+              <li>Java</li>
+              <li>Ruby</li>
+              <li>Go</li>
               <li>JavaScript</li>
               <li>TypeScript</li>
-              <li>Go</li>
             </ul>
           </div>
 
@@ -125,9 +135,11 @@
             <ul class="tag-list">
               <li>Git</li>
               <li>Linux</li>
+              <li>MySQL</li>
               <li>Docker</li>
+              <li>Ruby on Rails</li>
+              <li>Spring Boot</li>
               <li>LaTeX</li>
-              <li>AWS</li>
             </ul>
           </div>
         </div>
@@ -244,21 +256,75 @@
 
         <h3 class="timeline-group-title">職歴</h3>
         <ol class="timeline">
-          <!-- 1件分のひな型（コピーして使う）
           <li class="timeline-item">
-            <time class="timeline-period" datetime="2023-04">
-              <span class="timeline-period-from">2023.04</span>
+            <time class="timeline-period" datetime="2026-06">
+              <span class="timeline-period-from">2026.06</span>
               <span class="timeline-period-to">現在</span>
             </time>
             <div class="timeline-body">
-              <p class="timeline-role">職種・役職</p>
-              <p class="timeline-place">所属（会社名・部署・研究室など）</p>
+              <p class="timeline-role">東京大学マーケットデザインセンター(UTMD)</p>
+              <p class="timeline-place">リサーチアシスタント</p>
               <ul class="timeline-details">
-                <li>担当業務やプロジェクト（任意・複数可）</li>
+                <li>経済学の社会実装について、エンジニアの立場からの研究支援</li>
+                <li>デモページの開発</li>
               </ul>
             </div>
           </li>
-          -->
+          <li class="timeline-item">
+            <time class="timeline-period" datetime="2026-05">
+              <span class="timeline-period-from">2026.05</span>
+              <span class="timeline-period-to">現在</span>
+            </time>
+            <div class="timeline-body">
+              <p class="timeline-role">東京大学大学院経済学研究科</p>
+              <p class="timeline-place">松井研究室 / 特任研究員</p>
+              <ul class="timeline-details">
+                <li>「障害と経済」にまつわる研究</li>
+                <li>その他松井研究室の研究補助業務</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <time class="timeline-period" datetime="2024-08/2026-04">
+              <span class="timeline-period-from">2024.08</span>
+              <span class="timeline-period-to">2026.04</span>
+            </time>
+            <div class="timeline-body">
+              <p class="timeline-role">株式会社アトラエ</p>
+              <p class="timeline-place">Wevox事業部 / ソフトウェアエンジニア</p>
+              <ul class="timeline-details">
+                <li>エンゲージメント向上プラットフォーム「WeVox」の開発・運用</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <time class="timeline-period" datetime="2023-10/2024-07">
+              <span class="timeline-period-from">2023.10</span>
+              <span class="timeline-period-to">2024.07</span>
+            </time>
+            <div class="timeline-body">
+              <p class="timeline-role">LINEヤフー株式会社</p>
+              <p class="timeline-place">マーケティングソリューションカンパニー ビジネスPF統括本部 ビジネス基盤企画開発本部 / インフラエンジニア</p>
+              <ul class="timeline-details">
+                <li>BCPF(Business Central Platform)の保守運用</li>
+                <li>旧ヤフーと旧LINEのtoBサービスのプラットフォームの統合業務</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <time class="timeline-period" datetime="2022-04/2023-09">
+              <span class="timeline-period-from">2022.04</span>
+              <span class="timeline-period-to">2023.09</span>
+            </time>
+            <div class="timeline-body">
+              <p class="timeline-role">ヤフー株式会社</p>
+              <p class="timeline-place">コマースグループ コマースCTO コマースインフラ本部 / インフラエンジニア</p>
+            <ul class="timeline-details">
+              <li>BCPF(Business Central Platform)の保守運用</li>
+              <li>ヤフーの決済インフラの保守性向上に関連する横断的業務</li>
+            </ul>
+          </div>
+        </li>
         </ol>
 
         <h3 class="timeline-group-title">学歴</h3>
@@ -302,7 +368,7 @@
         <ul class="news-list">
           <li>
             <time datetime="2026-05">2026.05</time>
-            <span>REDDYメンバーとして<a href=https://www.reddy.e.u-tokyo.ac.jp/member/tanahashi.html>自己紹介</a>が更新されました。</span>
+            <span>REDDYメンバーとして<a href="https://www.reddy.e.u-tokyo.ac.jp/member/tanahashi.html">自己紹介</a>が更新されました。</span>
           </li>
           <!-- <li>
             <time datetime="2025-03">2025.03</time>
@@ -310,8 +376,8 @@
           </li>
           <li>
             <time datetime="2024-10">2024.10</time>
-            <span>研究助成（JSPS 科研費 若手研究）が採択されました。</span> -->
-          </li>
+            <span>研究助成（JSPS 科研費 若手研究）が採択されました。</span>
+          </li> -->
         </ul>
       </div>
     </section>
