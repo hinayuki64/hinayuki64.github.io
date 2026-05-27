@@ -19,8 +19,6 @@ GitHub Pages 向けの研究者ホームページひな型です。
 
 ### 主な編集ポイント
 
-- **Your Name** → 自分の名前に置換（全文検索がおすすめ）
-- **your.email@example.ac.jp** → 連絡先メールアドレス
 - **論文リスト** → `<article class="pub-item">` ブロックをコピーして追加
 - **CV (PDF)** → `assets/cv.pdf` を置いてリンクを更新
 
