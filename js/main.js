@@ -9,20 +9,24 @@
 
   // Mobile navigation
   var toggle = document.querySelector(".nav-toggle");
+  var headerActions = document.querySelector(".header-actions");
   var nav = document.querySelector(".site-nav");
+  var isJapanese = document.documentElement.lang === "ja";
+  var menuOpenLabel = isJapanese ? "メニューを開く" : "Open menu";
+  var menuCloseLabel = isJapanese ? "メニューを閉じる" : "Close menu";
 
-  if (toggle && nav) {
+  if (toggle && headerActions) {
     toggle.addEventListener("click", function () {
-      var isOpen = nav.classList.toggle("open");
+      var isOpen = headerActions.classList.toggle("open");
       toggle.setAttribute("aria-expanded", String(isOpen));
-      toggle.setAttribute("aria-label", isOpen ? "メニューを閉じる" : "メニューを開く");
+      toggle.setAttribute("aria-label", isOpen ? menuCloseLabel : menuOpenLabel);
     });
 
-    nav.querySelectorAll("a").forEach(function (link) {
+    headerActions.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
-        nav.classList.remove("open");
+        headerActions.classList.remove("open");
         toggle.setAttribute("aria-expanded", "false");
-        toggle.setAttribute("aria-label", "メニューを開く");
+        toggle.setAttribute("aria-label", menuOpenLabel);
       });
     });
   }
