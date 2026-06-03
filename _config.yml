@@ -1,0 +1,10 @@
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - README.md
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
