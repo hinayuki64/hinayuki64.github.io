@@ -15,8 +15,7 @@
   --color-badge-conference: #7c3aed;
   --color-badge-preprint: #d97706;
 
-  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
-  --font-serif: "Source Serif 4", Georgia, serif;
+  --font-sans: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", YuGothic, Meiryo, sans-serif;
 
   --header-height: 64px;
   --container-width: 960px;
@@ -206,9 +205,8 @@ a:hover {
 }
 
 .hero h1 {
-  font-family: var(--font-serif);
   font-size: clamp(2.2rem, 5vw, 3rem);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2;
   margin: 0 0 0.75rem;
 }
@@ -280,9 +278,8 @@ a:hover {
 }
 
 .section-title {
-  font-family: var(--font-serif);
   font-size: 1.75rem;
-  font-weight: 600;
+  font-weight: 700;
   margin: 0 0 0.5rem;
   padding-bottom: 0.75rem;
   border-bottom: 2px solid var(--color-accent);
