@@ -1,3 +1,5 @@
+timezone: Asia/Tokyo
+
 exclude:
   - node_modules
   - package.json
