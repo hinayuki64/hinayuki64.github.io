@@ -385,6 +385,27 @@ a:hover {
   white-space: nowrap;
 }
 
+/* Hobbies */
+.hobby-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+  max-width: 42rem;
+}
+
+.hobby-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+}
+
+.hobby-item p {
+  margin: 0;
+  line-height: 1.8;
+  color: var(--color-text);
+}
+
 /* Cards */
 .card-grid {
   display: grid;
