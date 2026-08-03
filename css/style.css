@@ -344,7 +344,8 @@ a:hover {
   margin: 0 0 1rem;
 }
 
-.language-list {
+.language-list,
+.cert-list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -352,7 +353,8 @@ a:hover {
   gap: 0.6rem;
 }
 
-.language-item {
+.language-item,
+.cert-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -364,11 +366,13 @@ a:hover {
   font-size: 0.95rem;
 }
 
-.language-name {
+.language-name,
+.cert-name {
   font-weight: 500;
 }
 
-.language-level {
+.language-level,
+.cert-date {
   display: inline-flex;
   align-items: center;
   font-size: 0.78rem;
