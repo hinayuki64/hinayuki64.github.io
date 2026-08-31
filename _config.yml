@@ -1,5 +1,8 @@
 timezone: Asia/Tokyo
 
+# GoatCounter site code (subdomain): https://<code>.goatcounter.com
+goatcounter: hinayuki64
+
 exclude:
   - node_modules
   - package.json
