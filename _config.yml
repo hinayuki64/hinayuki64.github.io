@@ -8,6 +8,7 @@ exclude:
   - package.json
   - package-lock.json
   - README.md
+  - DESIGN_PLAN.md
   - .gitignore
   - Gemfile
   - Gemfile.lock

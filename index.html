@@ -5,13 +5,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="研究者のホームページ — 研究内容、論文、経歴">
+  <meta name="description" content="研究者のホームページ — 研究内容、論文、経歴、動画編集">
   <title>Yu TANAHASHI | 特任研究員</title>
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
   <a class="skip-link" href="#main">本文へスキップ</a>
@@ -25,6 +25,7 @@
             <li><a href="#about">自己紹介</a></li>
             <li><a href="#skills">スキル</a></li>
             <li><a href="#hobbies">趣味・特技</a></li>
+            <li><a href="#video">動画編集</a></li>
             <!-- <li><a href="#research">研究</a></li>
             <li><a href="#publications">論文</a></li> -->
             <li><a href="#education">学歴・職歴</a></li>
@@ -49,34 +50,83 @@
   <main id="main">
     <!-- Hero -->
     <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <svg class="hero-graph" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <defs>
+            <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+              <circle cx="1" cy="1" r="1" fill="currentColor" opacity=".18"/>
+            </pattern>
+            <linearGradient id="fade" x1="0" x2="1">
+              <stop offset="0" stop-color="#0f172a" stop-opacity="1"/>
+              <stop offset=".45" stop-color="#0f172a" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <rect width="1200" height="600" fill="url(#dots)"/>
+          <!-- 二部グラフ: 左列 L1-L5、右列 R1-R5 -->
+          <g stroke="currentColor" stroke-width="1.5" fill="none" opacity=".35" class="hero-graph-edges">
+            <path d="M700 120 C 820 120, 880 180, 1000 180"/>
+            <path d="M700 120 C 820 120, 880 300, 1000 300"/>
+            <path d="M700 210 C 820 210, 880 120, 1000 120"/>
+            <path d="M700 300 C 820 300, 880 420, 1000 420"/>
+            <path d="M700 300 C 820 300, 880 240, 1000 240"/>
+            <path d="M700 390 C 820 390, 880 480, 1000 480"/>
+            <path d="M700 480 C 820 480, 880 360, 1000 360"/>
+          </g>
+          <!-- マッチした辺(強調) -->
+          <g stroke="#f59e0b" stroke-width="2.5" fill="none" opacity=".9" class="hero-graph-matched">
+            <path d="M700 210 C 820 210, 880 120, 1000 120"/>
+            <path d="M700 300 C 820 300, 880 240, 1000 240"/>
+            <path d="M700 480 C 820 480, 880 360, 1000 360"/>
+          </g>
+          <g fill="#0f172a" stroke="currentColor" stroke-width="2" class="hero-graph-nodes">
+            <circle cx="700" cy="120" r="7"/><circle cx="700" cy="210" r="7"/><circle cx="700" cy="300" r="7"/><circle cx="700" cy="390" r="7"/><circle cx="700" cy="480" r="7"/>
+            <circle cx="1000" cy="120" r="7"/><circle cx="1000" cy="180" r="7"/><circle cx="1000" cy="240" r="7"/><circle cx="1000" cy="300" r="7"/><circle cx="1000" cy="360" r="7"/><circle cx="1000" cy="420" r="7"/><circle cx="1000" cy="480" r="7"/>
+          </g>
+          <!-- 左側をフェードさせて本文の可読性を確保 -->
+          <rect width="1200" height="600" fill="url(#fade)"/>
+        </svg>
+      </div>
       <div class="container hero-inner">
         <div class="hero-text">
-          <p class="hero-label">特任研究員</p>
+          <p class="hero-label">Project Researcher</p>
           <h1>棚橋 悠</h1>
+          <p class="hero-tagline">経済学の理論を、社会で動かす。</p>
           <p class="hero-affiliation">
             東京大学大学院経済学研究科 松井研究室 特任研究員<br>
             東京大学マーケットデザインセンター(UTMD) リサーチアシスタント
           </p>
-          <p class="hero-bio">
-            東京大学で経済学と情報科学を学び、経済学と情報科学の融合領域で研究を行っています。
-          </p>
+          <p class="hero-bio">東京大学で経済学と情報科学を学び、経済学と情報科学の融合領域で研究を行っています。</p>
           <div class="hero-links">
             <a href="mailto:yutanahashi795@g.ecc.u-tokyo.ac.jp" class="btn btn-primary">Email</a>
             <a href="assets/cv.pdf" class="btn btn-outline">CV (PDF)</a>
             <!-- <a href="https://scholar.google.com/" class="btn btn-outline" target="_blank" rel="noopener">Google Scholar</a> -->
           </div>
+          <a class="hero-latest" href="#news">
+            <span class="hero-latest-tag">Latest</span>
+            <span>10/10 JJF2026 チャンピオンシップ チーム部門 決勝進出</span>
+          </a>
         </div>
         <figure class="hero-photo">
-          <!-- プロフィール写真: assets/profile.jpg を差し替えてください -->
-          <img src="assets/profile.jpg" alt="Yu TANAHASHI のプロフィール写真" width="280" height="280">
+          <picture>
+            <source srcset="assets/profile.webp" type="image/webp">
+            <img src="assets/profile.jpg" alt="Yu TANAHASHI のプロフィール写真" width="320" height="400">
+          </picture>
         </figure>
+      </div>
+      <div class="container">
+        <ul class="hero-stats reveal">
+          <li><span class="stat-value">16<small>年</small></span><span class="stat-label">ジャグリング歴</span></li>
+          <li><span class="stat-value">100<small>%</small></span><span class="stat-label">JR全線 完乗(2024.06)</span></li>
+          <!-- 訪問済み市区町村数: ここを更新 -->
+          <li><span class="stat-value">1,335<small>/1,747</small></span><span class="stat-label">訪問済み市区町村</span></li>
+        </ul>
       </div>
     </section>
 
     <!-- About -->
     <section id="about" class="section">
-      <div class="container">
-        <h2 class="section-title">自己紹介</h2>
+      <div class="container reveal">
+        <h2 class="section-title"><span class="section-num" aria-hidden="true">01</span>自己紹介</h2>
         <div class="about-grid">
           <div class="about-main">
             <p>
@@ -91,13 +141,18 @@
           </div>
           <aside class="about-sidebar">
             <h3>研究関心領域</h3>
-            <ul class="tag-list">
-              <li>インフォメーションデザイン</li>
-              <li>ゲーム理論</li>
-              <li>マーケットデザイン</li>
-              <li>障害と経済</li>
-              <li>交通経済学</li>
-            </ul>
+            <p class="interest-caption">横軸は経済学から情報科学、縦軸は理論から実装。</p>
+            <figure class="interest-map" aria-label="研究関心の位置づけ: 横軸は経済学から情報科学、縦軸は理論から実装">
+              <span class="axis axis-x" aria-hidden="true"><span>経済学</span><span>情報科学</span></span>
+              <span class="axis axis-y" aria-hidden="true"><span>理論</span><span>実装</span></span>
+              <ul class="interest-list">
+                <li style="--x: 22%; --y: 16%">ゲーム理論</li>
+                <li style="--x: 58%; --y: 30%">インフォメーションデザイン</li>
+                <li style="--x: 36%; --y: 52%">マーケットデザイン</li>
+                <li style="--x: 30%; --y: 82%">障害と経済</li>
+                <li style="--x: 70%; --y: 68%">交通経済学</li>
+              </ul>
+            </figure>
           </aside>
         </div>
       </div>
@@ -105,8 +160,8 @@
 
     <!-- Skills -->
     <section id="skills" class="section">
-      <div class="container">
-        <h2 class="section-title">スキル</h2>
+      <div class="container reveal">
+        <h2 class="section-title"><span class="section-num" aria-hidden="true">02</span>スキル</h2>
         <div class="skills-grid">
           <div class="skill-group">
             <h3 class="skill-group-title">言語</h3>
@@ -148,6 +203,16 @@
           </div>
 
           <div class="skill-group">
+            <h3 class="skill-group-title">動画編集</h3>
+            <ul class="tag-list">
+              <li>AviUtl2</li>
+              <li>カット編集</li>
+              <li>テロップ</li>
+              <li>BGM・SE 調整</li>
+            </ul>
+          </div>
+
+          <div class="skill-group skill-group-certs">
             <h3 class="skill-group-title">所持資格等</h3>
             <ul class="cert-list">
               <!-- 下記の <li> をコピーして資格を追加してください -->
@@ -179,8 +244,8 @@
 
     <!-- Hobbies -->
     <section id="hobbies" class="section section-alt">
-      <div class="container">
-        <h2 class="section-title">趣味・特技</h2>
+      <div class="container reveal">
+        <h2 class="section-title"><span class="section-num" aria-hidden="true">03</span>趣味・特技</h2>
         <div class="hobby-list">
           <article class="hobby-item">
             <h3 class="hobby-title">ジャグリング</h3>
@@ -194,6 +259,44 @@
               物心ついた時から鉄道に乗るのが大好き。2019年8月から2024年6月にかけて、日本のすべてのJR線を完乗した。今後は私鉄の全線完乗と、日本の全市区町村に訪問することを目指して旅を続けている。
             </p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Editing -->
+    <section id="video" class="section section-ink">
+      <div class="container reveal">
+        <h2 class="section-title"><span class="section-num" aria-hidden="true">04</span>動画編集</h2>
+        <div class="video-grid">
+          <div class="video-main">
+            <p>
+              2026年より動画編集に本格的に取り組んでいる。編集ソフトは AviUtl2 を使用し、カット編集からテロップ・BGM の調整、書き出しまでを一人で行っている。
+            </p>
+            <p>
+              YouTube チャンネル「<a href="https://www.youtube.com/@hinayuki64" target="_blank" rel="noopener">ヒナユキ(@hinayuki64)</a>」では、旅行・散歩の記録動画を公開している。
+            </p>
+            <div class="video-request">
+              <h3 class="video-request-title">動画編集のご依頼について</h3>
+              <p>
+                個人・団体を問わず、動画編集のご依頼を受け付けています。ジャグリングやパフォーマンスの演技動画、イベント記録、旅行 Vlog など、素材をお送りいただければ構成の相談から対応します。料金・納期は内容に応じてご相談のうえ決めています。まずはメールでお気軽にご連絡ください。
+              </p>
+              <div class="video-request-links">
+                <a class="btn btn-primary" href="mailto:ytana795.clubpassing@gmail.com?subject=%E5%8B%95%E7%94%BB%E7%B7%A8%E9%9B%86%E3%81%AE%E3%81%94%E4%BE%9D%E9%A0%BC">動画編集を依頼する</a>
+                <a class="btn btn-outline" href="https://www.youtube.com/@hinayuki64" target="_blank" rel="noopener">YouTube チャンネルを見る</a>
+              </div>
+            </div>
+          </div>
+          <a class="channel-card" href="https://www.youtube.com/@hinayuki64" target="_blank" rel="noopener" aria-label="YouTube チャンネル ヒナユキ(@hinayuki64) を開く(新しいタブ)">
+            <img class="channel-thumb" src="https://img.youtube.com/vi/2OoMuJyv89M/hqdefault.jpg" srcset="https://img.youtube.com/vi/2OoMuJyv89M/hqdefault.jpg 480w, https://img.youtube.com/vi/2OoMuJyv89M/maxresdefault.jpg 1280w" sizes="(max-width: 768px) 420px, 40vw" alt="" width="480" height="360" loading="lazy" decoding="async">
+            <span class="channel-meta">
+              <span class="channel-name">
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+                ヒナユキ(@hinayuki64)
+              </span>
+              <span class="channel-desc">旅行・散歩の記録動画を公開中</span>
+              <span class="channel-cta">YouTube で見る →</span>
+            </span>
+          </a>
         </div>
       </div>
     </section>
@@ -303,12 +406,18 @@
 
     <!-- Education & Experience -->
     <section id="education" class="section">
-      <div class="container">
-        <h2 class="section-title">学歴・職歴</h2>
+      <div class="container reveal">
+        <h2 class="section-title"><span class="section-num" aria-hidden="true">05</span>学歴・職歴</h2>
+        <ul class="route-legend" aria-label="路線色の凡例">
+          <li style="--line: var(--line-utokyo)">東京大学</li>
+          <li style="--line: var(--line-yahoo)">ヤフー</li>
+          <li class="is-dual" style="--line: var(--line-yahoo); --line-2: var(--line-line)">LINEヤフー</li>
+          <li style="--line: var(--line-atrae)">アトラエ</li>
+        </ul>
 
         <h3 class="timeline-group-title">職歴</h3>
-        <ol class="timeline">
-          <li class="timeline-item">
+        <ol class="timeline route-map">
+          <li class="timeline-item reveal is-current" style="--line: var(--line-utokyo)">
             <time class="timeline-period" datetime="2026-06">
               <span class="timeline-period-from">2026.06</span>
               <span class="timeline-period-to">現在</span>
@@ -322,7 +431,7 @@
               </ul>
             </div>
           </li>
-          <li class="timeline-item">
+          <li class="timeline-item reveal is-current" style="--line: var(--line-utokyo)">
             <time class="timeline-period" datetime="2026-05">
               <span class="timeline-period-from">2026.05</span>
               <span class="timeline-period-to">現在</span>
@@ -336,7 +445,7 @@
               </ul>
             </div>
           </li>
-          <li class="timeline-item">
+          <li class="timeline-item reveal is-transfer" style="--line: var(--line-atrae)">
             <time class="timeline-period" datetime="2024-08/2026-04">
               <span class="timeline-period-from">2024.08</span>
               <span class="timeline-period-to">2026.04</span>
@@ -349,7 +458,7 @@
               </ul>
             </div>
           </li>
-          <li class="timeline-item">
+          <li class="timeline-item reveal is-dual" style="--line: var(--line-yahoo); --line-2: var(--line-line)">
             <time class="timeline-period" datetime="2023-10/2024-07">
               <span class="timeline-period-from">2023.10</span>
               <span class="timeline-period-to">2024.07</span>
@@ -363,7 +472,7 @@
               </ul>
             </div>
           </li>
-          <li class="timeline-item">
+          <li class="timeline-item reveal" style="--line: var(--line-yahoo)">
             <time class="timeline-period" datetime="2022-04/2023-09">
               <span class="timeline-period-from">2022.04</span>
               <span class="timeline-period-to">2023.09</span>
@@ -380,8 +489,8 @@
         </ol>
 
         <h3 class="timeline-group-title">学歴</h3>
-        <ol class="timeline">
-          <li class="timeline-item">
+        <ol class="timeline route-map">
+          <li class="timeline-item reveal" style="--line: var(--line-utokyo)">
             <time class="timeline-period" datetime="2020-04/2022-03">
               <span class="timeline-period-from">2020.04</span>
               <span class="timeline-period-to">2022.03</span>
@@ -395,7 +504,7 @@
               </ul>
             </div>
           </li>
-          <li class="timeline-item">
+          <li class="timeline-item reveal" style="--line: var(--line-utokyo)">
             <time class="timeline-period" datetime="2016-04/2020-03">
               <span class="timeline-period-from">2016.04</span>
               <span class="timeline-period-to">2020.03</span>
@@ -415,9 +524,13 @@
 
     <!-- News -->
     <section id="news" class="section section-alt">
-      <div class="container">
-        <h2 class="section-title">ニュース</h2>
+      <div class="container reveal">
+        <h2 class="section-title"><span class="section-num" aria-hidden="true">06</span>ニュース</h2>
         <ul class="news-list">
+          <li class="is-latest">
+            <time datetime="2026-09">2026.09</time>
+            <span>10/10に行われる<a href="https://www.juggling.jp/jjf/2026/jp/championships/">JJF2026チャンピオンシップ</a>にチーム部門 「Passengers」で決勝進出が決定しました。</span>
+          </li>
           <li>
             <time datetime="2026-06">2026.06</time>
             <span><a href="https://www.mdc.e.u-tokyo.ac.jp/">東京大学マーケットデザインセンター(UTMD)</a>でリサーチアシスタントとして働き始めました。</span>
@@ -426,21 +539,18 @@
             <time datetime="2026-05">2026.05</time>
             <span>REDDYメンバーとして<a href="https://www.reddy.e.u-tokyo.ac.jp/member/tanahashi.html">自己紹介</a>が更新されました。</span>
           </li>
-          <li>
-            <time datetime="2026-09">2026.09</time>
-            <span>10/10に行われる<a href="https://www.juggling.jp/jjf/2026/jp/championships/">JJF2026チャンピオンシップ</a>にチーム部門 「Passengers」で決勝進出が決定しました。</span>
-          </li>
         </ul>
       </div>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="section">
-      <div class="container">
-        <h2 class="section-title">連絡先</h2>
+      <div class="container reveal">
+        <h2 class="section-title"><span class="section-num" aria-hidden="true">07</span>連絡先</h2>
         <div class="contact-grid">
           <div class="contact-info">
-            <p><strong>Email:</strong> <a href="mailto:yutanahashi795@g.ecc.u-tokyo.ac.jp">yutanahashi795@g.ecc.u-tokyo.ac.jp</a></p>
+            <p><strong>Email(研究・大学関連):</strong> <a href="mailto:yutanahashi795@g.ecc.u-tokyo.ac.jp">yutanahashi795@g.ecc.u-tokyo.ac.jp</a></p>
+            <p><strong>Email(動画編集などのご依頼):</strong> <a href="mailto:ytana795.clubpassing@gmail.com">ytana795.clubpassing@gmail.com</a></p>
             <p><strong>Office:</strong> 東京大学 国際学術研究科棟 8F 814号室</p>
             <p><strong>Address:</strong> 〒113-0033 東京都文京区本郷7-3-1</p>
           </div>
@@ -456,6 +566,10 @@
             <a href="https://github.com/hinayuki64" target="_blank" rel="noopener" aria-label="GitHub">
               <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02A9.58 9.58 0 0 1 12 6.8c.85.004 1.71.115 2.51.337 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5A10 10 0 0 0 22 12 10 10 0 0 0 12 2z"/></svg>
               GitHub
+            </a>
+            <a href="https://www.youtube.com/@hinayuki64" target="_blank" rel="noopener" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+              YouTube
             </a>
             <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X">
               <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
