@@ -1039,6 +1039,11 @@ h2.section-title,
   border-bottom: none;
 }
 
+.news-list li.is-latest {
+  border-left: 3px solid var(--color-accent-bright);
+  padding-left: 1rem;
+}
+
 .news-list time {
   font-size: 0.85rem;
   font-weight: 600;
