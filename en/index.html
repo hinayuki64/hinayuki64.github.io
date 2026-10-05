@@ -49,10 +49,44 @@
   <main id="main">
     <!-- Hero -->
     <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <svg class="hero-graph" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <defs>
+            <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+              <circle cx="1" cy="1" r="1" fill="currentColor" opacity=".18"/>
+            </pattern>
+            <linearGradient id="fade" x1="0" x2="1">
+              <stop offset="0" stop-color="#0f172a" stop-opacity="1"/>
+              <stop offset=".45" stop-color="#0f172a" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <rect width="1200" height="600" fill="url(#dots)"/>
+          <g stroke="currentColor" stroke-width="1.5" fill="none" opacity=".35" class="hero-graph-edges">
+            <path d="M700 120 C 820 120, 880 180, 1000 180"/>
+            <path d="M700 120 C 820 120, 880 300, 1000 300"/>
+            <path d="M700 210 C 820 210, 880 120, 1000 120"/>
+            <path d="M700 300 C 820 300, 880 420, 1000 420"/>
+            <path d="M700 300 C 820 300, 880 240, 1000 240"/>
+            <path d="M700 390 C 820 390, 880 480, 1000 480"/>
+            <path d="M700 480 C 820 480, 880 360, 1000 360"/>
+          </g>
+          <g stroke="#f59e0b" stroke-width="2.5" fill="none" opacity=".9" class="hero-graph-matched">
+            <path d="M700 210 C 820 210, 880 120, 1000 120"/>
+            <path d="M700 300 C 820 300, 880 240, 1000 240"/>
+            <path d="M700 480 C 820 480, 880 360, 1000 360"/>
+          </g>
+          <g fill="#0f172a" stroke="currentColor" stroke-width="2" class="hero-graph-nodes">
+            <circle cx="700" cy="120" r="7"/><circle cx="700" cy="210" r="7"/><circle cx="700" cy="300" r="7"/><circle cx="700" cy="390" r="7"/><circle cx="700" cy="480" r="7"/>
+            <circle cx="1000" cy="120" r="7"/><circle cx="1000" cy="180" r="7"/><circle cx="1000" cy="240" r="7"/><circle cx="1000" cy="300" r="7"/><circle cx="1000" cy="360" r="7"/><circle cx="1000" cy="420" r="7"/><circle cx="1000" cy="480" r="7"/>
+          </g>
+          <rect width="1200" height="600" fill="url(#fade)"/>
+        </svg>
+      </div>
       <div class="container hero-inner">
         <div class="hero-text">
-          <p class="hero-label">Project Researcher</p>
+          <p class="hero-label">// Project Researcher</p>
           <h1>Yu TANAHASHI</h1>
+          <p class="hero-tagline">Putting economic theory to work in society.</p>
           <p class="hero-affiliation">
             Project Researcher, Matsui Laboratory, Graduate School of Economics, The University of Tokyo<br>
             Research Assistant, the University of Tokyo Market Design Center (UTMD), Research Assistant
@@ -65,17 +99,33 @@
             <a href="../assets/cv.pdf" class="btn btn-outline">CV (PDF)</a>
             <!-- <a href="https://scholar.google.com/" class="btn btn-outline" target="_blank" rel="noopener">Google Scholar</a> -->
           </div>
+          <a class="hero-latest" href="#news">
+            <span class="hero-latest-tag">Latest</span>
+            <span>Oct 10 — JJF 2026 Championship finals (team division)</span>
+          </a>
         </div>
         <figure class="hero-photo">
-          <img src="../assets/profile.jpg" alt="Profile photo of Yu TANAHASHI" width="280" height="280">
+          <picture>
+            <source srcset="../assets/profile.webp" type="image/webp">
+            <img src="../assets/profile.jpg" alt="Profile photo of Yu TANAHASHI" width="320" height="400">
+          </picture>
         </figure>
+      </div>
+      <div class="container">
+        <ul class="hero-stats reveal">
+          <li><span class="stat-value">16<small>yrs</small></span><span class="stat-label">Juggling</span></li>
+          <li><span class="stat-value">2<small>nd</small></span><span class="stat-label">JJF 2022 Team Division</span></li>
+          <li><span class="stat-value">100<small>%</small></span><span class="stat-label">All JR lines completed (Jun 2024)</span></li>
+          <!-- 訪問済み市区町村数: ここを更新 -->
+          <li><span class="stat-value">1,335<small>/1,747</small></span><span class="stat-label">Municipalities visited</span></li>
+        </ul>
       </div>
     </section>
 
     <!-- About -->
     <section id="about" class="section">
-      <div class="container">
-        <h2 class="section-title">About</h2>
+      <div class="container reveal">
+        <h2 class="section-title"><span class="section-num" aria-hidden="true">01</span>About</h2>
         <div class="about-grid">
           <div class="about-main">
             <p>
@@ -90,13 +140,17 @@
           </div>
           <aside class="about-sidebar">
             <h3>Research Interests</h3>
-            <ul class="tag-list">
-              <li>Information Design</li>
-              <li>Game Theory</li>
-              <li>Market Design</li>
-              <li>Disability and Economics</li>
-              <li>Transportation Economics</li>
-            </ul>
+            <figure class="interest-map" aria-label="Research interests: horizontal axis from economics to information science, vertical axis from theory to implementation">
+              <span class="axis axis-x" aria-hidden="true"><span>Economics</span><span>Information Science</span></span>
+              <span class="axis axis-y" aria-hidden="true"><span>Theory</span><span>Implementation</span></span>
+              <ul class="interest-list">
+                <li style="--x: 18%; --y: 18%">Game Theory</li>
+                <li style="--x: 42%; --y: 30%">Information Design</li>
+                <li style="--x: 40%; --y: 58%">Market Design</li>
+                <li style="--x: 20%; --y: 78%">Disability and Economics</li>
+                <li style="--x: 70%; --y: 72%">Transportation Economics</li>
+              </ul>
+            </figure>
           </aside>
         </div>
       </div>
@@ -104,8 +158,8 @@
 
     <!-- Skills -->
     <section id="skills" class="section">
-      <div class="container">
-        <h2 class="section-title">Skills</h2>
+      <div class="container reveal">
+        <h2 class="section-title"><span class="section-num" aria-hidden="true">02</span>Skills</h2>
         <div class="skills-grid">
           <div class="skill-group">
             <h3 class="skill-group-title">Languages</h3>
@@ -144,7 +198,7 @@
             </ul>
           </div>
 
-          <div class="skill-group">
+          <div class="skill-group skill-group-certs">
             <h3 class="skill-group-title">Certifications</h3>
             <ul class="cert-list">
               <li class="cert-item">
@@ -175,8 +229,8 @@
 
     <!-- Hobbies -->
     <section id="hobbies" class="section section-alt">
-      <div class="container">
-        <h2 class="section-title">Hobbies &amp; Interests</h2>
+      <div class="container reveal">
+        <h2 class="section-title"><span class="section-num" aria-hidden="true">03</span>Hobbies &amp; Interests</h2>
         <div class="hobby-list">
           <article class="hobby-item">
             <h3 class="hobby-title">Juggling</h3>
@@ -196,12 +250,18 @@
 
     <!-- Education & Experience -->
     <section id="education" class="section">
-      <div class="container">
-        <h2 class="section-title">Education &amp; Experience</h2>
+      <div class="container reveal">
+        <h2 class="section-title"><span class="section-num" aria-hidden="true">04</span>Education &amp; Experience</h2>
+        <ul class="route-legend" aria-label="Route color legend">
+          <li style="--line: var(--line-utokyo)">The University of Tokyo</li>
+          <li style="--line: var(--line-yahoo)">Yahoo Japan</li>
+          <li class="is-dual" style="--line: var(--line-yahoo); --line-2: var(--line-line)">LY Corporation</li>
+          <li style="--line: var(--line-atrae)">Atrae</li>
+        </ul>
 
         <h3 class="timeline-group-title">Work Experience</h3>
-        <ol class="timeline">
-          <li class="timeline-item">
+        <ol class="timeline route-map">
+          <li class="timeline-item reveal is-current" style="--line: var(--line-utokyo)">
             <time class="timeline-period" datetime="2026-06">
               <span class="timeline-period-from">2026.06</span>
               <span class="timeline-period-to">Present</span>
@@ -215,7 +275,7 @@
               </ul>
             </div>
           </li>
-          <li class="timeline-item">
+          <li class="timeline-item reveal is-current" style="--line: var(--line-utokyo)">
             <time class="timeline-period" datetime="2026-05">
               <span class="timeline-period-from">2026.05</span>
               <span class="timeline-period-to">Present</span>
@@ -229,7 +289,7 @@
               </ul>
             </div>
           </li>
-          <li class="timeline-item">
+          <li class="timeline-item reveal is-transfer" style="--line: var(--line-atrae)">
             <time class="timeline-period" datetime="2024-08/2026-04">
               <span class="timeline-period-from">2024.08</span>
               <span class="timeline-period-to">2026.04</span>
@@ -242,7 +302,7 @@
               </ul>
             </div>
           </li>
-          <li class="timeline-item">
+          <li class="timeline-item reveal is-dual" style="--line: var(--line-yahoo); --line-2: var(--line-line)">
             <time class="timeline-period" datetime="2023-10/2024-07">
               <span class="timeline-period-from">2023.10</span>
               <span class="timeline-period-to">2024.07</span>
@@ -256,7 +316,7 @@
               </ul>
             </div>
           </li>
-          <li class="timeline-item">
+          <li class="timeline-item reveal" style="--line: var(--line-yahoo)">
             <time class="timeline-period" datetime="2022-04/2023-09">
               <span class="timeline-period-from">2022.04</span>
               <span class="timeline-period-to">2023.09</span>
@@ -273,8 +333,8 @@
         </ol>
 
         <h3 class="timeline-group-title">Education</h3>
-        <ol class="timeline">
-          <li class="timeline-item">
+        <ol class="timeline route-map">
+          <li class="timeline-item reveal" style="--line: var(--line-utokyo)">
             <time class="timeline-period" datetime="2020-04/2022-03">
               <span class="timeline-period-from">2020.04</span>
               <span class="timeline-period-to">2022.03</span>
@@ -288,7 +348,7 @@
               </ul>
             </div>
           </li>
-          <li class="timeline-item">
+          <li class="timeline-item reveal" style="--line: var(--line-utokyo)">
             <time class="timeline-period" datetime="2016-04/2020-03">
               <span class="timeline-period-from">2016.04</span>
               <span class="timeline-period-to">2020.03</span>
@@ -308,9 +368,13 @@
 
     <!-- News -->
     <section id="news" class="section">
-      <div class="container">
-        <h2 class="section-title">News</h2>
+      <div class="container reveal">
+        <h2 class="section-title"><span class="section-num" aria-hidden="true">05</span>News</h2>
         <ul class="news-list">
+          <li class="is-latest">
+            <time datetime="2026-09">2026.09</time>
+            <span>Our team “Passengers” has advanced to the finals of the <a href="https://www.juggling.jp/jjf/2026/en/championships/">JJF 2026 Championship</a> (team division), to be held on October 10.</span>
+          </li>
           <li>
             <time datetime="2026-06">2026.06</time>
             <span>I have started working as a Research Assistant at the <a href="https://www.mdc.e.u-tokyo.ac.jp/">University of Tokyo Market Design Center (UTMD)</a>.</span>
@@ -318,10 +382,6 @@
           <li>
             <time datetime="2026-05">2026.05</time>
             <span>My <a href="https://www.reddy.e.u-tokyo.ac.jp/member/tanahashi.html">profile page</a> as a REDDY member has been updated.</span>
-          </li>
-          <li>
-            <time datetime="2026-09">2026.09</time>
-            <span>Our team “Passengers” has advanced to the finals of the <a href="https://www.juggling.jp/jjf/2026/en/championships/">JJF 2026 Championship</a> (team division), to be held on October 10.</span>
           </li>
           <!-- <li>
             <time datetime="2025-03">2025.03</time>
@@ -337,8 +397,8 @@
 
     <!-- Contact -->
     <section id="contact" class="section section-alt">
-      <div class="container">
-        <h2 class="section-title">Contact</h2>
+      <div class="container reveal">
+        <h2 class="section-title"><span class="section-num" aria-hidden="true">06</span>Contact</h2>
         <div class="contact-grid">
           <div class="contact-info">
             <p><strong>Email:</strong> <a href="mailto:yutanahashi795@g.ecc.u-tokyo.ac.jp">yutanahashi795@g.ecc.u-tokyo.ac.jp</a></p>
