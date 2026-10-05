@@ -3,24 +3,37 @@
    ======================================== */
 
 :root {
-  --color-bg: #fafafa;
-  --color-bg-alt: #f0f2f5;
+  --color-ink: #0f172a;
+  --color-ink-soft: #1e293b;
+  --color-bg: #fafaf9;
+  --color-bg-alt: #f3f1ec;
   --color-surface: #ffffff;
-  --color-text: #1a1a2e;
-  --color-text-muted: #5c5c7a;
-  --color-accent: #2563eb;
-  --color-accent-hover: #1d4ed8;
-  --color-border: #e2e4ea;
+  --color-text: #0f172a;
+  --color-text-muted: #55607a;
+  --color-accent: #b45309;
+  --color-accent-hover: #92400e;
+  --color-accent-bright: #f59e0b;
+  --color-border: #e4e2dc;
+  --color-on-ink: #f8fafc;
+  --color-on-ink-muted: #cbd5e1;
+  --line-utokyo: #0b8bee;
+  --line-yahoo: #ff0033;
+  --line-line: #06c755;
+  --line-atrae: #000000;
   --color-badge-journal: #059669;
   --color-badge-conference: #7c3aed;
   --color-badge-preprint: #d97706;
 
   --font-sans: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", YuGothic, Meiryo, sans-serif;
+  --font-display: "Inter", "Zen Kaku Gothic New", var(--font-sans);
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
 
   --header-height: 64px;
   --container-width: 960px;
-  --radius: 8px;
+  --radius: 10px;
+  --radius-lg: 18px;
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 20px 40px -20px rgba(15, 23, 42, 0.35);
   --transition: 0.2s ease;
   --timeline-date-width: 6.5rem;
 }
@@ -60,6 +73,26 @@ a:hover {
   color: var(--color-accent-hover);
 }
 
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+h1,
+h2.section-title,
+.stat-value,
+.logo {
+  font-family: var(--font-display);
+}
+
+.hero-label,
+.section-num,
+.timeline-period,
+.news-list time,
+.cert-date {
+  font-family: var(--font-mono);
+}
+
 .container {
   width: min(100% - 2rem, var(--container-width));
   margin-inline: auto;
@@ -72,8 +105,8 @@ a:hover {
   left: 1rem;
   z-index: 200;
   padding: 0.5rem 1rem;
-  background: var(--color-accent);
-  color: #fff;
+  background: var(--color-accent-bright);
+  color: var(--color-ink);
   border-radius: var(--radius);
 }
 
@@ -240,13 +273,27 @@ a:hover {
 }
 
 .btn-primary {
-  background: var(--color-accent);
-  color: #fff;
+  background: var(--color-accent-bright);
+  color: var(--color-ink);
 }
 
 .btn-primary:hover {
-  background: var(--color-accent-hover);
-  color: #fff;
+  background: #fbbf24;
+  color: var(--color-ink);
+}
+
+.hero .btn-outline {
+  border-color: rgba(255, 255, 255, 0.35);
+  color: var(--color-on-ink);
+}
+
+.hero .btn-outline:hover {
+  border-color: var(--color-accent-bright);
+  color: var(--color-accent-bright);
+}
+
+.hero :focus-visible {
+  outline-color: var(--color-accent-bright);
 }
 
 .btn-outline {
@@ -460,9 +507,9 @@ a:hover {
 
 .filter-btn:hover,
 .filter-btn.active {
-  background: var(--color-accent);
-  border-color: var(--color-accent);
-  color: #fff;
+  background: var(--color-accent-bright);
+  border-color: var(--color-accent-bright);
+  color: var(--color-ink);
 }
 
 .pub-list {
@@ -587,10 +634,10 @@ a:hover {
   top: 0.4rem;
   width: 12px;
   height: 12px;
-  background: var(--color-accent);
+  background: var(--color-accent-bright);
   border-radius: 50%;
   border: 2px solid var(--color-surface);
-  box-shadow: 0 0 0 2px var(--color-accent);
+  box-shadow: 0 0 0 2px var(--color-accent-bright);
 }
 
 .timeline-period {
