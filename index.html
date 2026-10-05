@@ -49,27 +49,77 @@
   <main id="main">
     <!-- Hero -->
     <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <svg class="hero-graph" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <defs>
+            <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+              <circle cx="1" cy="1" r="1" fill="currentColor" opacity=".18"/>
+            </pattern>
+            <linearGradient id="fade" x1="0" x2="1">
+              <stop offset="0" stop-color="#0f172a" stop-opacity="1"/>
+              <stop offset=".45" stop-color="#0f172a" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <rect width="1200" height="600" fill="url(#dots)"/>
+          <!-- 二部グラフ: 左列 L1-L5、右列 R1-R5 -->
+          <g stroke="currentColor" stroke-width="1.5" fill="none" opacity=".35" class="hero-graph-edges">
+            <path d="M700 120 C 820 120, 880 180, 1000 180"/>
+            <path d="M700 120 C 820 120, 880 300, 1000 300"/>
+            <path d="M700 210 C 820 210, 880 120, 1000 120"/>
+            <path d="M700 300 C 820 300, 880 420, 1000 420"/>
+            <path d="M700 300 C 820 300, 880 240, 1000 240"/>
+            <path d="M700 390 C 820 390, 880 480, 1000 480"/>
+            <path d="M700 480 C 820 480, 880 360, 1000 360"/>
+          </g>
+          <!-- マッチした辺(強調) -->
+          <g stroke="#f59e0b" stroke-width="2.5" fill="none" opacity=".9" class="hero-graph-matched">
+            <path d="M700 210 C 820 210, 880 120, 1000 120"/>
+            <path d="M700 300 C 820 300, 880 240, 1000 240"/>
+            <path d="M700 480 C 820 480, 880 360, 1000 360"/>
+          </g>
+          <g fill="#0f172a" stroke="currentColor" stroke-width="2" class="hero-graph-nodes">
+            <circle cx="700" cy="120" r="7"/><circle cx="700" cy="210" r="7"/><circle cx="700" cy="300" r="7"/><circle cx="700" cy="390" r="7"/><circle cx="700" cy="480" r="7"/>
+            <circle cx="1000" cy="120" r="7"/><circle cx="1000" cy="180" r="7"/><circle cx="1000" cy="240" r="7"/><circle cx="1000" cy="300" r="7"/><circle cx="1000" cy="360" r="7"/><circle cx="1000" cy="420" r="7"/><circle cx="1000" cy="480" r="7"/>
+          </g>
+          <!-- 左側をフェードさせて本文の可読性を確保 -->
+          <rect width="1200" height="600" fill="url(#fade)"/>
+        </svg>
+      </div>
       <div class="container hero-inner">
         <div class="hero-text">
-          <p class="hero-label">特任研究員</p>
+          <p class="hero-label">// Project Researcher</p>
           <h1>棚橋 悠</h1>
+          <p class="hero-tagline">経済学の理論を、社会で動かす。</p>
           <p class="hero-affiliation">
             東京大学大学院経済学研究科 松井研究室 特任研究員<br>
             東京大学マーケットデザインセンター(UTMD) リサーチアシスタント
           </p>
-          <p class="hero-bio">
-            東京大学で経済学と情報科学を学び、経済学と情報科学の融合領域で研究を行っています。
-          </p>
+          <p class="hero-bio">東京大学で経済学と情報科学を学び、経済学と情報科学の融合領域で研究を行っています。</p>
           <div class="hero-links">
             <a href="mailto:yutanahashi795@g.ecc.u-tokyo.ac.jp" class="btn btn-primary">Email</a>
             <a href="assets/cv.pdf" class="btn btn-outline">CV (PDF)</a>
             <!-- <a href="https://scholar.google.com/" class="btn btn-outline" target="_blank" rel="noopener">Google Scholar</a> -->
           </div>
+          <a class="hero-latest" href="#news">
+            <span class="hero-latest-tag">Latest</span>
+            <span>10/10 JJF2026 チャンピオンシップ チーム部門 決勝進出</span>
+          </a>
         </div>
         <figure class="hero-photo">
-          <!-- プロフィール写真: assets/profile.jpg を差し替えてください -->
-          <img src="assets/profile.jpg" alt="Yu TANAHASHI のプロフィール写真" width="280" height="280">
+          <picture>
+            <source srcset="assets/profile.webp" type="image/webp">
+            <img src="assets/profile.jpg" alt="Yu TANAHASHI のプロフィール写真" width="320" height="400">
+          </picture>
         </figure>
+      </div>
+      <div class="container">
+        <ul class="hero-stats">
+          <li><span class="stat-value">16<small>年</small></span><span class="stat-label">ジャグリング歴</span></li>
+          <li><span class="stat-value">2<small>位</small></span><span class="stat-label">JJF 2022 チーム部門</span></li>
+          <li><span class="stat-value">100<small>%</small></span><span class="stat-label">JR全線 完乗(2024.06)</span></li>
+          <!-- 訪問済み市区町村数: ここを更新 -->
+          <li><span class="stat-value">1,335<small>/1,747</small></span><span class="stat-label">訪問済み市区町村</span></li>
+        </ul>
       </div>
     </section>
 
