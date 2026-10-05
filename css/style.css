@@ -1103,10 +1103,11 @@ h2.section-title,
 
 .contact-info p {
   margin: 0 0 0.75rem;
+  white-space: nowrap;
 }
 
 .contact-info a {
-  overflow-wrap: anywhere;
+  white-space: nowrap;
 }
 
 .contact-links {
@@ -1361,6 +1362,15 @@ h2.section-title,
   .about-grid,
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-info p,
+  .contact-info a {
+    white-space: normal;
+  }
+
+  .contact-info a {
+    overflow-wrap: anywhere;
   }
 
   .interest-map {
